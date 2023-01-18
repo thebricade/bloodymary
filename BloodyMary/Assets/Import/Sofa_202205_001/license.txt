@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sofa 202205_001
+* source:	https://sketchfab.com/3d-models/sofa-202205-001-86a1883d07c441178d4e5cc7a14bf14f
+* author:	vegu (https://sketchfab.com/iamvegu)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sofa 202205_001" (https://sketchfab.com/3d-models/sofa-202205-001-86a1883d07c441178d4e5cc7a14bf14f) by vegu (https://sketchfab.com/iamvegu) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
