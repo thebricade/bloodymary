@@ -64,6 +64,11 @@ public class SceneManger : MonoBehaviour
         }
         
     }
+
+    public void DebugInteraction()
+    {
+        Debug.Log("you looking at cake");
+    }
     
 
 }
