@@ -5,11 +5,19 @@ using UnityEngine;
 public class SelectInterations : MonoBehaviour
 {
     public Camera playerCamera;
+    private ExamineItem examineItem;
+    
+    
+    //might not need below
+    public Material selectedMaterial;
+    public  Material baseMaterial; 
+    private bool isCurrentlySelected;
+    private GameObject currentlySelected;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        isCurrentlySelected = false;
     }
 
     // Update is called once per frame
@@ -18,28 +26,76 @@ public class SelectInterations : MonoBehaviour
         //Debug.Log(Input.mousePosition);
        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
        RaycastHit hit;
-
-        //Debug.DrawLine(transform.position, transform.forward, Color.green);
-
+       
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.DrawRay(ray.origin, ray.direction, Color.blue);
-            if (hit.collider != null)
+            if (hit.collider.gameObject.CompareTag("KeyItem"))
             {
-                Debug.Log("hit something");
-                if (hit.collider.gameObject.CompareTag("KeyItem"))
+                //Get the examine item component 
+                examineItem = hit.collider.gameObject.GetComponent<ExamineItem>();
+
+                if (examineItem != null)
                 {
-                    Debug.Log("I hit cake");
-                    Debug.DrawRay(ray.origin, ray.direction * 100, Color.green, 3f);
-                    
+                    //figure out current state and action for the item
+                    switch (examineItem.currentState)
+                    {
+                        case ItemState.Idle:
+                            Debug.Log("I hit cake");
+
+
+                            examineItem.Hover();
+                            break;
+                        case ItemState.Hover:
+                            //
+                            Debug.DrawRay(ray.origin, ray.direction * 100, Color.green, 3f);
+                            Debug.Log("current in hover");
+                            break;
+                        case ItemState.Examine:
+                            //
+                            break;
+                        case ItemState.PutDown:
+                            //
+                            break;
+                    }
                 }
-                else
-                {
-                  
-                
-                }
+            }else if (examineItem != null)
+            {
+                examineItem.Idle();
+                examineItem = null;
             }
         }
     }
 }
 
+
+/*
+ * Debug.Log("hit something");
+                    if (hit.collider.gameObject.CompareTag("KeyItem"))
+                    {
+                        Debug.Log("I hit cake");
+                        Debug.DrawRay(ray.origin, ray.direction * 100, Color.green, 3f);
+
+                        currentlySelected = hit.collider.gameObject;
+
+
+                        isCurrentlySelected = true;
+                        if (isCurrentlySelected)
+                        {
+                            baseMaterial = currentlySelected.GetComponent<MeshRenderer>().material;
+                            currentlySelected.GetComponent<MeshRenderer>().material = selectedMaterial;
+                        }
+                    }
+                    else
+                    {
+                        isCurrentlySelected = false;
+
+
+                        if (currentlySelected != null)
+                        {
+                            Debug.Log(currentlySelected);
+                            currentlySelected.GetComponent<MeshRenderer>().material = baseMaterial;
+
+                        }
+
+                    }
+ */
