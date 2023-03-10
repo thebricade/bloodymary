@@ -8,6 +8,7 @@ public class SelectInterations : MonoBehaviour
     private ExamineItem examineItem;
     
     
+    
     //might not need below
     public Material selectedMaterial;
     public  Material baseMaterial; 
@@ -47,14 +48,16 @@ public class SelectInterations : MonoBehaviour
                             break;
                         case ItemState.Hover:
                             //
-                            Debug.DrawRay(ray.origin, ray.direction * 100, Color.green, 3f);
                             Debug.Log("current in hover");
+                            examineItem.Hover();
                             break;
                         case ItemState.Examine:
                             //
+                            examineItem.Examine();
                             break;
                         case ItemState.PutDown:
                             //
+                            examineItem.PutDown();
                             break;
                     }
                 }
