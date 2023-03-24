@@ -5,7 +5,7 @@ using Fungus;
 
 public class SceneManger : MonoBehaviour
 {
-    private Flowchart _flowchart; 
+    public Flowchart _flowchart; 
     
     public enum GameScenes
     {
@@ -61,6 +61,7 @@ public class SceneManger : MonoBehaviour
             Debug.Log("AOL scene started");
             targetScene = GameScenes.AolIntro;
             changeScene = true; 
+            _flowchart.SendFungusMessage(targetScene.ToString());
         }
         
     }
