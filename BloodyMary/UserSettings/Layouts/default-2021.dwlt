@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 503, y: 492}
   m_MaxSize: {x: 18097, y: 14042}
   vertical: 0
-  controlID: 97
+  controlID: 38
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 23
+  controlID: 39
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 88
+  controlID: 40
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -305,8 +305,9 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: 
-    m_ClassNames: []
+    m_NameFilter: bookshelf
+    m_ClassNames:
+    - Prefab
     m_AssetLabels: []
     m_AssetBundleNames: []
     m_VersionControlStates: []
@@ -315,24 +316,24 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 1
+    m_SearchArea: 0
     m_Folders:
-    - Assets/SuburbNeighborhood/Meshes/Props_interior
+    - Assets/SuburbNeighborhood/Prefabs/Props_interior
     m_Globs: []
-    m_OriginalText: 
+    m_OriginalText: bookshelf
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/SuburbNeighborhood/Meshes/Props_interior
+  - Assets/SuburbNeighborhood/Prefabs/Props_interior
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\k\Documents\Unity\bloodymary\BloodyMary
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 341.66666}
-    m_SelectedIDs: 12920000
-    m_LastClickedID: 37394
-    m_ExpandedIDs: 000000003074000032740000587500006e8b000000ca9a3b
+    scrollPos: {x: 0, y: 385.66666}
+    m_SelectedIDs: c68d0000
+    m_LastClickedID: 36294
+    m_ExpandedIDs: 00000000908c0000928c0000948c0000b88d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +361,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000307400003274000034740000
+    m_ExpandedIDs: 00000000908c0000928c0000948c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -388,7 +389,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000f4910000a8940000
+    m_ExpandedInstanceIDs: c6230000f4910000a89400004c8f000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -412,7 +413,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 671.6666}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -487,10 +488,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a0b5fdff
-      m_LastClickedID: -150112
-      m_ExpandedIDs: 0e9dfeff40ebffff7cf9ffffb8faffffa47500002c760000727600007078000090780000347a00007c7a0000b27a0000ca7a0000567b0000527c0000
+      scrollPos: {x: 0, y: 387.33334}
+      m_SelectedIDs: faf0ffff
+      m_LastClickedID: -3846
+      m_ExpandedIDs: 6e84feffeef2fefff8f8fffffcf8ffff00f9ffff04f9ffffeefaffffe27400009e7600000a7700003077000004790000387900005e79000066790000aa790000d67900006e7a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -772,9 +773,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.884198, y: 0.38028824, z: -9.452011}
+    m_Target: {x: 6.229596, y: 3.3603272, z: 1.6594114}
     speed: 2
-    m_Value: {x: 2.884198, y: 0.38028824, z: -9.452011}
+    m_Value: {x: 6.229596, y: 3.3603272, z: 1.6594114}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -813,7 +814,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -821,13 +822,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.04847918, y: 0.94660306, z: -0.27127388, w: -0.16815649}
+    m_Target: {x: 0.1610056, y: -0.48118648, z: 0.08901337, w: 0.85737354}
     speed: 2
-    m_Value: {x: -0.04872456, y: 0.9460656, z: -0.2726562, w: -0.16806063}
+    m_Value: {x: 0.16083364, y: -0.48235723, z: 0.08923354, w: 0.856447}
   m_Size:
-    m_Target: 3.7640154
+    m_Target: 2.110278
     speed: 2
-    m_Value: 3.7640154
+    m_Value: 2.2097151
   m_Ortho:
     m_Target: 0
     speed: 2
