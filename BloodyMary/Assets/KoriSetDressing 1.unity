@@ -7052,6 +7052,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 443264, guid: a422438477a64e7498bf7999328ba960, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.047
+      objectReference: {fileID: 0}
     - target: {fileID: 450252, guid: a422438477a64e7498bf7999328ba960, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -7062,7 +7066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 450252, guid: a422438477a64e7498bf7999328ba960, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.049679484
+      value: 0.196
       objectReference: {fileID: 0}
     - target: {fileID: 450252, guid: a422438477a64e7498bf7999328ba960, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12153,7 +12157,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1586058076}
-  m_RootOrder: 15
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &699801073
 BoxCollider:
@@ -14236,9 +14240,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 77572042}
   - {fileID: 1598453005}
   - {fileID: 1221393776}
+  - {fileID: 77572042}
   - {fileID: 935770383}
   - {fileID: 2130896381}
   m_Father: {fileID: 895836591}
@@ -24085,17 +24089,17 @@ Transform:
   - {fileID: 1177351489}
   - {fileID: 1434531791}
   - {fileID: 1236882733}
+  - {fileID: 888538417}
   - {fileID: 340509883}
   - {fileID: 1451800265}
   - {fileID: 2027720459}
   - {fileID: 1388823390}
+  - {fileID: 918141826}
+  - {fileID: 1561878532}
+  - {fileID: 513733294}
+  - {fileID: 2037258837}
   - {fileID: 493930675}
   - {fileID: 87158390}
-  - {fileID: 513733294}
-  - {fileID: 1561878532}
-  - {fileID: 888538417}
-  - {fileID: 2037258837}
-  - {fileID: 918141826}
   m_Father: {fileID: 2135708717}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24844,16 +24848,16 @@ Transform:
   - {fileID: 1793441486}
   - {fileID: 747567501}
   - {fileID: 477399742}
+  - {fileID: 699801072}
   - {fileID: 1357185244}
   - {fileID: 44403424}
-  - {fileID: 2054944186}
   - {fileID: 1194085870}
   - {fileID: 1775165189}
-  - {fileID: 699801072}
   - {fileID: 1935714963}
   - {fileID: 2024821681}
   - {fileID: 1409794549}
   - {fileID: 979331312}
+  - {fileID: 2054944186}
   - {fileID: 255154039}
   - {fileID: 1048126480}
   - {fileID: 1134678987}
