@@ -26,6 +26,7 @@ public class SelectInterations : MonoBehaviour
     {
         //Debug.Log(Input.mousePosition);
        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
+       Debug.DrawRay(ray.origin,ray.direction *10, Color.red);
        RaycastHit hit;
        
         if (Physics.Raycast(ray, out hit))
@@ -34,6 +35,7 @@ public class SelectInterations : MonoBehaviour
             {
                 //Get the examine item component 
                 examineItem = hit.collider.gameObject.GetComponent<ExamineItem>();
+                Debug.Log("Hit something");
 
                 if (examineItem != null)
                 {
