@@ -15,7 +15,7 @@ public enum ItemState
 public class ExamineItem : MonoBehaviour
 {
     public ItemState currentState;
-    public bool canPickUp;
+    public bool canExamine;
 
     public Camera mainCamera; 
     public Camera examinationCamera;
@@ -53,7 +53,7 @@ public class ExamineItem : MonoBehaviour
         if (currentState == ItemState.Hover)
         {
             Debug.Log("we are in the hover");
-            if (canPickUp && Input.GetKeyDown(KeyCode.Q)) // would change if there's an item you can pickup
+            if (canExamine && Input.GetKeyDown(KeyCode.Q)) // would change if there's an item you can pickup
             {
                 Debug.Log("moving to examine");
                 currentState = ItemState.Examine; 
