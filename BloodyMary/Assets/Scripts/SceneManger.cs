@@ -12,6 +12,7 @@ public class SceneManger : MonoBehaviour
         HappyBirthday,
         Mash,
         AolIntro,
+        FirstAoLConvo,
         OuijaBoard
     }
 
@@ -34,6 +35,7 @@ public class SceneManger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //need to run through this, but I don't believe this needs to exist
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("pressing E");
@@ -60,6 +62,14 @@ public class SceneManger : MonoBehaviour
         {
             Debug.Log("AOL scene started");
             targetScene = GameScenes.AolIntro;
+            changeScene = true; 
+            _flowchart.SendFungusMessage(targetScene.ToString());
+        }
+
+        if (nextScene == GameScenes.FirstAoLConvo)
+        {
+            Debug.Log("message convo started");
+            targetScene = GameScenes.FirstAoLConvo;
             changeScene = true; 
             _flowchart.SendFungusMessage(targetScene.ToString());
         }
