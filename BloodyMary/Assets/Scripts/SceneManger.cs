@@ -36,6 +36,7 @@ public class SceneManger : MonoBehaviour
     void Update()
     {
         //need to run through this, but I don't believe this needs to exist
+        /*
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("pressing E");
@@ -46,6 +47,7 @@ public class SceneManger : MonoBehaviour
                 _flowchart.SendFungusMessage(targetScene.ToString());
             }
         }
+        */
     }
 
 
@@ -55,6 +57,7 @@ public class SceneManger : MonoBehaviour
         {
             Debug.Log("Moving to Mash Scene");
             targetScene = GameScenes.Mash;
+            _flowchart.SendFungusMessage(targetScene.ToString());
             changeScene = true;
         }
 
@@ -76,10 +79,7 @@ public class SceneManger : MonoBehaviour
         
     }
 
-    public void DebugInteraction()
-    {
-        Debug.Log("you looking at cake");
-    }
+ 
     
 
 }

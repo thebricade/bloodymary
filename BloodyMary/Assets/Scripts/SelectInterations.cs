@@ -5,7 +5,7 @@ using UnityEngine;
 public class SelectInterations : MonoBehaviour
 {
     public Camera playerCamera;
-    private ExamineItem examineItem;
+    private ExamineItemState examineItem;
     
     
     
@@ -29,12 +29,12 @@ public class SelectInterations : MonoBehaviour
        Debug.DrawRay(ray.origin,ray.direction *10, Color.red);
        RaycastHit hit;
        
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit, 1))
         {
             if (hit.collider.gameObject.CompareTag("KeyItem"))
             {
                 //Get the examine item component 
-                examineItem = hit.collider.gameObject.GetComponent<ExamineItem>();
+                examineItem = hit.collider.gameObject.GetComponent<ExamineItemState>();
                 Debug.Log("Hit something");
 
                 if (examineItem != null)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ComputerManager : MonoBehaviour
 {
-    public ExamineItem _ExamineItem;
+    public ExamineItemState _ExamineItem;
     public SceneManger _SceneManger;
 
     public GameObject computerScreen;
