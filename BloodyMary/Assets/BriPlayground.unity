@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5320018, g: 0.36767945, b: 0.2601447, a: 1}
+  m_IndirectSpecularColor: {r: 0.5670264, g: 0.3922223, b: 0.2720002, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1531,6 +1531,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4377371488478436863, guid: 8cec822a89e9d0942a74bdae050f2b7c, type: 3}
   m_PrefabInstance: {fileID: 98682270}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &100294619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 100294620}
+  - component: {fileID: 100294621}
+  m_Layer: 5
+  m_Name: Mash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &100294620
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100294619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2008354362}
+  m_Father: {fileID: 655642411}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -262}
+  m_SizeDelta: {x: 1281, y: 1662}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &100294621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100294619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14d0fb064a54ff42a7b52734fb2f34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answersNeeded: 3
+  _SceneManger: {fileID: 1260124187}
+  subject:
+  - {fileID: 1459408028}
+  - {fileID: 481429663}
+  - {fileID: 553207442}
+  - {fileID: 1117569853}
+  - {fileID: 1256117567}
+  - {fileID: 519970798}
+  triggeredSubject: 000100010100
 --- !u!1 &109257696
 GameObject:
   m_ObjectHideFlags: 0
@@ -6989,7 +7049,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2008354365}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MashManager, Assembly-CSharp
           m_MethodName: TappedSubject
           m_Mode: 5
@@ -7572,7 +7632,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2008354365}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MashManager, Assembly-CSharp
           m_MethodName: TappedSubject
           m_Mode: 5
@@ -8381,7 +8441,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1702798683}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MashManager, Assembly-CSharp
           m_MethodName: TappedSubject
           m_Mode: 5
@@ -8748,8 +8808,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2008354362}
-  - {fileID: 1702798682}
+  - {fileID: 100294620}
+  - {fileID: 1753557877}
   m_Father: {fileID: 1880262774}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10938,7 +10998,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &656422239
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14091,7 +14151,6 @@ GameObject:
   - component: {fileID: 911071407}
   - component: {fileID: 911071406}
   - component: {fileID: 911071405}
-  - component: {fileID: 911071409}
   m_Layer: 0
   m_Name: ComputerInteraction
   m_TagString: KeyItem
@@ -14197,21 +14256,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911071403}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &911071409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911071403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abf2a960873c4c141ba45f84dc3965f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ExamineItem: {fileID: 911071405}
-  _SceneManger: {fileID: 1260124187}
-  computerScreen: {fileID: 1702798681}
 --- !u!4 &914588975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 417486, guid: 16bd00dd836c8d048a52fb929f75d4f7, type: 3}
@@ -18005,6 +18049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1260124186}
+  - component: {fileID: 1260124189}
   - component: {fileID: 1260124187}
   - component: {fileID: 1260124188}
   m_Layer: 0
@@ -18058,6 +18103,18 @@ MonoBehaviour:
   playerCamera: {fileID: 922945643}
   selectedMaterial: {fileID: 0}
   baseMaterial: {fileID: 0}
+--- !u!114 &1260124189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260124185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cecce4be49b4146ad232be09c54e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1260581792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20229,7 +20286,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2008354365}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MashManager, Assembly-CSharp
           m_MethodName: TappedSubject
           m_Mode: 5
@@ -22807,9 +22864,9 @@ GameObject:
   - component: {fileID: 1702798682}
   - component: {fileID: 1702798685}
   - component: {fileID: 1702798684}
-  - component: {fileID: 1702798683}
+  - component: {fileID: 1702798686}
   m_Layer: 5
-  m_Name: Computer
+  m_Name: ComputerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22822,43 +22879,21 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702798681}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 11}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 639229010}
   - {fileID: 543231174}
-  m_Father: {fileID: 655642411}
-  m_RootOrder: 1
+  m_Father: {fileID: 1753557877}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 2266.9714, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1702798683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1702798681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a14d0fb064a54ff42a7b52734fb2f34e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  answersNeeded: 3
-  _SceneManger: {fileID: 1260124187}
-  subject:
-  - {fileID: 639229006}
-  - {fileID: 543231171}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  triggeredSubject: 000100010100
 --- !u!114 &1702798684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22897,6 +22932,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702798681}
   m_CullTransparentMesh: 1
+--- !u!114 &1702798686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702798681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf2a960873c4c141ba45f84dc3965f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ExamineItem: {fileID: 0}
+  _SceneManger: {fileID: 0}
+  computerScreen: {fileID: 0}
 --- !u!4 &1703181068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 496168, guid: 54cf8638ed3899e46b54fb11246fff9c, type: 3}
@@ -23361,6 +23411,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e927b0fab37a35a498d19b22e76ab450, type: 3}
   m_PrefabInstance: {fileID: 1874466717}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1753557876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753557877}
+  - component: {fileID: 1753557878}
+  m_Layer: 5
+  m_Name: Computer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1753557877
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753557876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1702798682}
+  m_Father: {fileID: 655642411}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1753557878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753557876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf2a960873c4c141ba45f84dc3965f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ExamineItem: {fileID: 0}
+  _SceneManger: {fileID: 0}
+  computerScreen: {fileID: 0}
 --- !u!1001 &1757202488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27401,9 +27504,8 @@ GameObject:
   - component: {fileID: 2008354362}
   - component: {fileID: 2008354364}
   - component: {fileID: 2008354363}
-  - component: {fileID: 2008354365}
   m_Layer: 5
-  m_Name: Mash
+  m_Name: MashImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27416,7 +27518,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008354361}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -27427,12 +27529,12 @@ RectTransform:
   - {fileID: 1117569854}
   - {fileID: 1256117568}
   - {fileID: 519970799}
-  m_Father: {fileID: 655642411}
+  m_Father: {fileID: 100294620}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -262}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1281, y: 1662}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2008354363
@@ -27473,28 +27575,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008354361}
   m_CullTransparentMesh: 1
---- !u!114 &2008354365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008354361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a14d0fb064a54ff42a7b52734fb2f34e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  answersNeeded: 3
-  _SceneManger: {fileID: 1260124187}
-  subject:
-  - {fileID: 1459408028}
-  - {fileID: 481429663}
-  - {fileID: 553207442}
-  - {fileID: 1117569853}
-  - {fileID: 1256117567}
-  - {fileID: 519970798}
-  triggeredSubject: 000100010100
 --- !u!4 &2015943417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 428222, guid: 8952d23bba5e6c64ba7847a319fd1ce9, type: 3}
