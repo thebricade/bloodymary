@@ -1,3 +1,4 @@
+using Cinemachine;
 using Fungus;
 using UnityEngine;
 
@@ -17,5 +18,14 @@ public class ServiceLocator
     public static ComputerManager _ComputerManager; 
 
     //specific areas of the game
+    
+    //ref to camera & players 
+    public static GameObject _Player;
+    public static CinemachineVirtualCamera _PlayerCamera;
+    public static CinemachineVirtualCamera _LivingRoomCamera;
+    public static CinemachineVirtualCamera _ComputerCamera;
+   // public static CinemachineVirtualCamera _BathroomMirrorCamera;
+
+    public static CinemachineVirtualCamera _ExamineCamera; 
 
 }

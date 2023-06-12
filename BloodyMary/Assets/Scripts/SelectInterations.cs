@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class SelectInterations : MonoBehaviour
 {
-    public Camera playerCamera;
+    
+    private CinemachineVirtualCamera playerCamera;
     private ExamineItemState examineItem;
     
     
@@ -18,14 +20,15 @@ public class SelectInterations : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerCamera = ServiceLocator._PlayerCamera; 
         isCurrentlySelected = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(Input.mousePosition);
-       Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
+        //Debug.Log(Input.mousePosition); /// this might not work 
+       Ray ray = playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
        Debug.DrawRay(ray.origin,ray.direction *10, Color.red);
        RaycastHit hit;
        
