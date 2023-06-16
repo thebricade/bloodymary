@@ -17,11 +17,13 @@ public class ComputerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_ExamineItem.currentState == ItemState.Examine)
+        /*
+         if (_ExamineItem.currentState == ItemState.Examine)
         {
             computerScreen.SetActive(true);
             _SceneManger.ChangeScene(SceneManger.GameScenes.FirstAoLConvo);
             _ExamineItem.currentState = ItemState.Idle; 
         }
+        */ 
     }
 }

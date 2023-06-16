@@ -39,6 +39,7 @@ public class SelectInterations : MonoBehaviour
                 //Get the examine item component 
                 examineItem = hit.collider.gameObject.GetComponent<ExamineItemState>();
                 Debug.Log("Hit something");
+                var objectSelecting = hit.collider.gameObject.name; 
 
                 if (examineItem != null)
                 {
@@ -64,6 +65,10 @@ public class SelectInterations : MonoBehaviour
                             //
                             examineItem.PutDown();
                             break;
+                        case  ItemState.ChangeView:
+                            examineItem.ChangeView(objectSelecting);
+                            break;
+                        
                     }
                 }
             }else if (examineItem != null)

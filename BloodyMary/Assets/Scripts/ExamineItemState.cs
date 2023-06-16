@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Hertzole.GoldPlayer;
 using UnityEngine;
 
 
@@ -9,22 +10,27 @@ public enum ItemState
     Idle,
     Hover,
     Examine,
-    PutDown
+    PutDown,
+    ChangeView
 }
 
 public class ExamineItemState : MonoBehaviour
 {
     public ItemState currentState;
     public bool canExamine;
+    public bool changeView; 
 
-    public Camera mainCamera; 
-    public Camera examinationCamera;
+    private CinemachineVirtualCamera mainCamera; 
+    private CinemachineVirtualCamera examinationCamera;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        //startPos = gameObject.transform.position; 
+        examinationCamera = ServiceLocator._ExamineCamera;
+        mainCamera = ServiceLocator._PlayerCamera; 
+
+
     }
     public void Idle()
     {
@@ -52,18 +58,34 @@ public class ExamineItemState : MonoBehaviour
         
         if (currentState == ItemState.Hover)
         {
-            Debug.Log("we are in the hover");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (changeView)
+                {
+                    Debug.Log("moving to Change View");
+                    currentState = ItemState.ChangeView; 
+                }
+
+                if (canExamine)
+                {
+                    Debug.Log("moving to examine");
+                    currentState = ItemState.Examine;
+                }
+            }
+            
+          /*  Debug.Log("we are in the hover");
             if (canExamine && Input.GetKeyDown(KeyCode.E)) // would change if there's an item you can pickup
             {
-                Debug.Log("moving to examine");
+                
                 currentState = ItemState.Examine; 
 
-            }
+            }*/ 
         }
     }
 
     public void Examine()
     {
+         
         if (currentState == ItemState.Examine)
         {
             Debug.Log("in examine");
@@ -83,11 +105,13 @@ public class ExamineItemState : MonoBehaviour
             examinationCamera.gameObject.SetActive(true);
             
             // Deactivate the main camera
-            mainCamera.gameObject.SetActive(false);
+            ServiceLocator._Player.GetComponent<GoldPlayerController>().Camera.CanLookAround = false;
+            ServiceLocator._Player.GetComponent<GoldPlayerController>().Movement.CanMoveAround = false;
 
            //check to see if we are pressing the interaction key again if we are lets exit the item
-           if (Input.GetKeyDown(KeyCode.Q))
+           if (Input.GetKeyDown(KeyCode.E))
            {
+               Debug.Log("Pressed E during examine");
                currentState = ItemState.PutDown; 
            }
 
@@ -103,10 +127,29 @@ public class ExamineItemState : MonoBehaviour
             Debug.Log("moving to putdown");
             
             //change camera back to main camera
-            mainCamera.gameObject.SetActive(true);
             examinationCamera.gameObject.SetActive(false);
+            
+            ServiceLocator._Player.GetComponent<GoldPlayerController>().Camera.CanLookAround = true;
+            ServiceLocator._Player.GetComponent<GoldPlayerController>().Movement.CanMoveAround = true;
 
             //code to put down
+        }
+    }
+
+    public void ChangeView(string view)
+    {
+        if (currentState == ItemState.ChangeView)
+        {
+           Debug.Log(view);
+            switch (view)
+            {
+                case "ComputerInteraction":
+                    Debug.Log("Change to computer scene");
+                    ServiceLocator._ComputerCamera.Priority = 11; 
+                    break;
+                
+            }
+                
         }
     }
 

@@ -5,7 +5,7 @@ using Fungus;
 
 public class SceneManger : MonoBehaviour
 {
-    public Flowchart _flowchart; 
+    private Flowchart _flowchart; 
     
     public enum GameScenes
     {
@@ -27,7 +27,7 @@ public class SceneManger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _flowchart = GameObject.Find("Flowchart").GetComponent<Flowchart>();  //see if there's a better way to do this
+        _flowchart = ServiceLocator._Flowchart; 
         //set the first scene
         currentScene = GameScenes.HappyBirthday; 
     }
@@ -35,19 +35,7 @@ public class SceneManger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //need to run through this, but I don't believe this needs to exist
-        /*
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("pressing E");
-            if (changeScene)
-            {
-                changeScene = false;
-                currentScene = targetScene; 
-                _flowchart.SendFungusMessage(targetScene.ToString());
-            }
-        }
-        */
+       
     }
 
 
@@ -59,6 +47,7 @@ public class SceneManger : MonoBehaviour
             targetScene = GameScenes.Mash;
             _flowchart.SendFungusMessage(targetScene.ToString());
             changeScene = true;
+          
         }
 
         if (nextScene == GameScenes.AolIntro)
