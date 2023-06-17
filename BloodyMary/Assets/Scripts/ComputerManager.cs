@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class ComputerManager : MonoBehaviour
 {
-    public ExamineItemState _ExamineItem;
-    public SceneManger _SceneManger;
-
-    public GameObject computerScreen;
+   //may not need this script, might become a way for us to save data on what is on the computer
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +14,6 @@ public class ComputerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-         if (_ExamineItem.currentState == ItemState.Examine)
-        {
-            computerScreen.SetActive(true);
-            _SceneManger.ChangeScene(SceneManger.GameScenes.FirstAoLConvo);
-            _ExamineItem.currentState = ItemState.Idle; 
-        }
-        */ 
+       
     }
 }
