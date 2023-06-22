@@ -17,7 +17,13 @@ public class ComputerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(_currentComputerState.currentState);
+       
+
+        if (_currentComputerState.currentState == ItemState.ChangeView)
+        {
+            Debug.Log("true hope this only fires once");
+            CurrentMessage();
+        }
         
         if (messageSound)
         {

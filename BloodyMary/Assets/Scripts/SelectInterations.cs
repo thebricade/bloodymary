@@ -68,6 +68,9 @@ public class SelectInterations : MonoBehaviour
                         case  ItemState.ChangeView:
                             examineItem.ChangeView(objectSelecting);
                             break;
+                        case ItemState.InView:
+                            examineItem.InView(objectSelecting);
+                            break;
                         
                     }
                 }

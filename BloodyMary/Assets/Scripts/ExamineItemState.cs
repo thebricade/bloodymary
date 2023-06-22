@@ -11,7 +11,8 @@ public enum ItemState
     Hover,
     Examine,
     PutDown,
-    ChangeView
+    ChangeView,
+    InView,
 }
 
 public class ExamineItemState : MonoBehaviour
@@ -73,13 +74,6 @@ public class ExamineItemState : MonoBehaviour
                 }
             }
             
-          /*  Debug.Log("we are in the hover");
-            if (canExamine && Input.GetKeyDown(KeyCode.E)) // would change if there's an item you can pickup
-            {
-                
-                currentState = ItemState.Examine; 
-
-            }*/ 
         }
     }
 
@@ -129,9 +123,14 @@ public class ExamineItemState : MonoBehaviour
             //change camera back to main camera
             examinationCamera.gameObject.SetActive(false);
             
+            ServiceLocator._Player.SetActive(true);
+            ServiceLocator._Game.ChangeCursor("off");
             ServiceLocator._Player.GetComponent<GoldPlayerController>().Camera.CanLookAround = true;
             ServiceLocator._Player.GetComponent<GoldPlayerController>().Movement.CanMoveAround = true;
-
+            ServiceLocator._PlayerCamera.Priority = 11; 
+            
+         
+            currentState = ItemState.Idle;
             //code to put down
         }
     }
@@ -143,7 +142,7 @@ public class ExamineItemState : MonoBehaviour
            Debug.Log(view);
             switch (view)
             {
-                case "ComputerInteraction":
+                case "ComputerInteraction": //this is messy find a way to do this neater
                     Debug.Log("Change to computer scene");
                     ServiceLocator._Player.SetActive(false);
                     ServiceLocator._ComputerCamera.Priority = 11; 
@@ -151,17 +150,42 @@ public class ExamineItemState : MonoBehaviour
                     
                     ServiceLocator._2DComputerImage.SetActive(true);
                     ServiceLocator._Game.ChangeCursor("on"); // turning cursor on
-                    //ServiceLocator._ComputerManager.CurrentMessage();
+                    ServiceLocator._ComputerManager.CurrentMessage();
+                    currentState = ItemState.InView;
                     break;
                 
             }
                 
         }
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void InView(string view)
     {
-     
+        if (currentState == ItemState.InView)
+        {
+            switch (view)
+            {
+                case "ComputerInteraction":
+                    //you'd be waiting for them to press the interaction key and close the computer?
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        Debug.Log("Pressed E during InView");
+                        ServiceLocator._ComputerCamera.Priority = 10; 
+                        ServiceLocator._2DComputerImage.SetActive(false);
+                        
+                        currentState = ItemState.PutDown;
+                        
+                    }
+
+                    break;
+                
+            }
+            
+
+        } 
+        
+      
     }
+    
+
 }
