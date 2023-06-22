@@ -27,5 +27,8 @@ public class ServiceLocator
    // public static CinemachineVirtualCamera _BathroomMirrorCamera;
 
     public static CinemachineVirtualCamera _ExamineCamera; 
+    
+    //2d scenes
+    public static GameObject _2DComputerImage; 
 
 }

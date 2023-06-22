@@ -145,7 +145,13 @@ public class ExamineItemState : MonoBehaviour
             {
                 case "ComputerInteraction":
                     Debug.Log("Change to computer scene");
+                    ServiceLocator._Player.SetActive(false);
                     ServiceLocator._ComputerCamera.Priority = 11; 
+                    
+                    
+                    ServiceLocator._2DComputerImage.SetActive(true);
+                    ServiceLocator._Game.ChangeCursor("on"); // turning cursor on
+                    //ServiceLocator._ComputerManager.CurrentMessage();
                     break;
                 
             }

@@ -30,13 +30,17 @@ public class Game : MonoBehaviour
         ServiceLocator._MashManager = GameObject.Find("Mash").GetComponent<MashManager>();
         ServiceLocator._ComputerManager = GameObject.Find("Computer").GetComponent<ComputerManager>();
         
+        
         //Camera & Player Ref
         ServiceLocator._Player = GameObject.Find("Gold Player");
         ServiceLocator._PlayerCamera = ServiceLocator._Player.GetComponentInChildren<CinemachineVirtualCamera>();
         ServiceLocator._LivingRoomCamera = GameObject.Find("CM_LivingRoom").GetComponent<CinemachineVirtualCamera>();
         ServiceLocator._ComputerCamera = GameObject.Find("CM_Computer").GetComponent<CinemachineVirtualCamera>(); 
         //bathroom mirror camera when added
-        ServiceLocator._ExamineCamera = GameObject.Find("ExamineCamera").GetComponent<CinemachineVirtualCamera>(); 
+        ServiceLocator._ExamineCamera = GameObject.Find("ExamineCamera").GetComponent<CinemachineVirtualCamera>();
+        
+        //2d Game scenes 
+        ServiceLocator._2DComputerImage = GameObject.Find("ComputerImage"); 
 
     }
 
@@ -47,6 +51,7 @@ public class Game : MonoBehaviour
         
         //make is so that the goldplayer is turned off 
         ServiceLocator._Player.SetActive(false);
+        ServiceLocator._2DComputerImage.SetActive(false);
     }
     
     
@@ -54,7 +59,26 @@ public class Game : MonoBehaviour
     {
         //This can be called from fungus or when about to run something that needs a specific cursor
         //adjust this to allow an input to help us know what cursor to display
-        Cursor.visible = true;
-        Screen.lockCursor = false;
+      Cursor.visible = true;
+      Screen.lockCursor = false;  
+    }
+
+    public void ChangeCursor(string cursorType)
+    {
+        switch (cursorType)
+        {
+            case "off":
+                Cursor.visible = false;
+                Screen.lockCursor = true; 
+                break;
+            case "on":
+                Cursor.visible = true;
+                Screen.lockCursor = false; 
+                break;
+            case "mouse":
+                break;
+            case "pen":
+                break;
+        }
     }
 }
