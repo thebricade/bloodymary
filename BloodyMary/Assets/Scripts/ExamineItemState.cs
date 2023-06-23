@@ -166,6 +166,7 @@ public class ExamineItemState : MonoBehaviour
             switch (view)
             {
                 case "ComputerInteraction":
+                   
                     //you'd be waiting for them to press the interaction key and close the computer?
                     if (Input.GetKeyDown(KeyCode.E))
                     {

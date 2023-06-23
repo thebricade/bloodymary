@@ -4,26 +4,30 @@ using UnityEngine;
 
 public class ComputerManager : MonoBehaviour
 {
+    public enum AimMessage
+    {
+        IntroMessage
+    }
+    
+    
     private float timer;
-    private ExamineItemState _currentComputerState; 
-
+    private ExamineItemState _currentComputerState;
+    public AimMessage currentAimMesaage; 
     public bool messageSound; 
+    
+   
+    
     // Start is called before the first frame update
     void Start()
     {
         _currentComputerState = gameObject.GetComponent<ExamineItemState>();
+        currentAimMesaage = AimMessage.IntroMessage; 
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-
-        if (_currentComputerState.currentState == ItemState.ChangeView)
-        {
-            Debug.Log("true hope this only fires once");
-            CurrentMessage();
-        }
+        
         
         if (messageSound)
         {
@@ -44,7 +48,13 @@ public class ComputerManager : MonoBehaviour
 
     public void CurrentMessage()
     {
-       //find a way to save what message you are current on here
-        ServiceLocator._Flowchart.SendFungusMessage("FirstAoLConvo");
+        //find a way to save what message you are current on here
+        switch (currentAimMesaage)
+        {
+            case AimMessage.IntroMessage:
+                ServiceLocator._Flowchart.SendFungusMessage("FirstAoLConvo");
+                break;
+        }
+        
     }
 }
