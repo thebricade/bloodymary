@@ -13,7 +13,8 @@ public class SceneManger : MonoBehaviour
         Mash,
         AolIntro,
         FirstAoLConvo,
-        OuijaBoard
+        OuijaBoard,
+        Summoning
     }
 
     public GameScenes currentScene;
@@ -64,6 +65,26 @@ public class SceneManger : MonoBehaviour
             targetScene = GameScenes.FirstAoLConvo;
             changeScene = true; 
             _flowchart.SendFungusMessage(targetScene.ToString());
+        }
+
+        if (nextScene == GameScenes.OuijaBoard)
+        {
+            
+        }
+
+        if (nextScene == GameScenes.Summoning)
+        {
+            Debug.Log("now entering summoning");
+            //should teleport the player into the bathroom 
+            ServiceLocator._Player.GetComponent<Transform>().position = new Vector3(-1.725f, 0.459f, -3.461f);
+            targetScene = GameScenes.Summoning; 
+            _flowchart.SendFungusMessage(targetScene.ToString());
+            //might need to turn the player around to another location or grab a set location early on in the game and then just change to that transform
+            // ServiceLocator._Player.GetComponent<Transform>().rotation = 
+            // shut door
+            //start prompt to turn off the lights 
+
+
         }
         
     }

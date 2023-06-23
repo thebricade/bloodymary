@@ -123,13 +123,7 @@ public class ExamineItemState : MonoBehaviour
             //change camera back to main camera
             examinationCamera.gameObject.SetActive(false);
             
-            ServiceLocator._Player.SetActive(true);
-            ServiceLocator._Game.ChangeCursor("off");
-            ServiceLocator._Player.GetComponent<GoldPlayerController>().Camera.CanLookAround = true;
-            ServiceLocator._Player.GetComponent<GoldPlayerController>().Movement.CanMoveAround = true;
-            ServiceLocator._PlayerCamera.Priority = 11; 
-            
-         
+    
             currentState = ItemState.Idle;
             //code to put down
         }
@@ -173,8 +167,16 @@ public class ExamineItemState : MonoBehaviour
                         Debug.Log("Pressed E during InView");
                         ServiceLocator._ComputerCamera.Priority = 10; 
                         ServiceLocator._2DComputerImage.SetActive(false);
+                        ServiceLocator._Player.SetActive(true);
                         
-                        currentState = ItemState.PutDown;
+                        ServiceLocator._Game.ChangeCursor("off");
+                        ServiceLocator._Player.GetComponent<GoldPlayerController>().Camera.CanLookAround = true;
+                        ServiceLocator._Player.GetComponent<GoldPlayerController>().Movement.CanMoveAround = true;
+                        ServiceLocator._PlayerCamera.Priority = 11; 
+                        ServiceLocator._ComputerManager.ChangeAimMessage("IntroMessageEnd");
+
+                        
+                        currentState = ItemState.Idle;
                         
                     }
 

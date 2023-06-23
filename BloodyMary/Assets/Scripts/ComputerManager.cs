@@ -6,7 +6,8 @@ public class ComputerManager : MonoBehaviour
 {
     public enum AimMessage
     {
-        IntroMessage
+        IntroMessage,
+        IntroMessageEnd
     }
     
     
@@ -54,7 +55,21 @@ public class ComputerManager : MonoBehaviour
             case AimMessage.IntroMessage:
                 ServiceLocator._Flowchart.SendFungusMessage("FirstAoLConvo");
                 break;
+            case AimMessage.IntroMessageEnd:
+                break;
         }
         
+    }
+
+    public void ChangeAimMessage(string message)
+    {
+        switch (message)
+        {
+            case "IntroMessageEnd":
+                currentAimMesaage = AimMessage.IntroMessageEnd; 
+                //change this to the ouji when we want to put that in 
+                ServiceLocator._SceneManger.ChangeScene(SceneManger.GameScenes.Summoning);
+                break;
+        }
     }
 }
