@@ -1,0 +1,9 @@
+Mary.png
+size:940,384
+filter:Linear,Linear
+pma:true
+scale:0.5
+Head
+bounds:597,2,339,380
+Torso
+bounds:2,7,593,375
