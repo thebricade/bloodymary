@@ -27,7 +27,7 @@ public class SelectInterations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(Input.mousePosition); /// this might not work 
+      /*  //Debug.Log(Input.mousePosition); /// this might not work 
        Ray ray = playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
        Debug.DrawRay(ray.origin,ray.direction *10, Color.red);
        RaycastHit hit;
@@ -80,6 +80,12 @@ public class SelectInterations : MonoBehaviour
                 examineItem = null;
             }
         }
+        */
+    } 
+
+    public void CursorOn()
+    {
+        Cursor.visible = true;
     }
 }
 
