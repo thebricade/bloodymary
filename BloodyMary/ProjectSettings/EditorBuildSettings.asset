@@ -5,13 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/MaryTest.unity
-    guid: ff5d2be34ba5d2d46abf3b658ae4426b
+    path: Assets/0 Lobby.unity
+    guid: 163c619646e09af4295fcf8daa715761
   - enabled: 1
-    path: Assets/MaryDemo.unity
-    guid: 665e21b958e0a0746b90d5efc95f6726
+    path: Assets/1 Gameplay.unity
+    guid: 1e34b4392639c9a4d9a30fc0e1e70a75
   m_configObjects: {}
