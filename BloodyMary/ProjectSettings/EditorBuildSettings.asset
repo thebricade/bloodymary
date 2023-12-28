@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1 Gameplay.unity
     guid: 1e34b4392639c9a4d9a30fc0e1e70a75
+  - enabled: 1
+    path: Assets/MaryDemo.unity
+    guid: 665e21b958e0a0746b90d5efc95f6726
   m_configObjects: {}

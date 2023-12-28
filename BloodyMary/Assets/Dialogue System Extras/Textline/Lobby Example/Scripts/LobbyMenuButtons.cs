@@ -27,7 +27,7 @@ namespace PixelCrushers.DialogueSystem.Extras
         public void StartOrResumeConversation(string conversationTitle)
         {
             SMSDialogueUI.conversationVariableOverride = conversationTitle;
-            SaveSystem.LoadScene(gameplaySceneName);
+            SaveSystem.LoadScene(gameplaySceneName); //does it need to load another scene?
         }
     }
 }
