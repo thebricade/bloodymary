@@ -350,7 +350,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: '["Keyword_Witchcraft"] == true'
+      userScript: Variable["Keyword_Witchcraft"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls:
@@ -368,7 +368,7 @@ MonoBehaviour:
             m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 149.90244
+        x: 151.0789
         y: 228.2927
         width: 160
         height: 30
@@ -383,11 +383,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -417,8 +417,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 136.48781
-        y: 392.92682
+        x: 156.96127
+        y: 357.11618
         width: 160
         height: 30
     entryGroups: []
@@ -603,7 +603,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: 'So you saw '
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -624,14 +624,14 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Keyword_Witchcraft"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 162
+        x: 111
         y: 200
         width: 160
         height: 30
