@@ -43,7 +43,6 @@ namespace PixelCrushers.DialogueSystem
         protected Rect sequenceRect;
         protected DialogueEntryPicker entryPicker = null;
         protected string[] conversationTitles = null;
-        protected DialogueEntryPicker barkEntryPicker = null;
 
         protected DialogueSystemTrigger trigger;
         protected SerializedProperty triggerProperty;
@@ -83,11 +82,11 @@ namespace PixelCrushers.DialogueSystem
 
             showSetQuestStateAction = !string.IsNullOrEmpty(trigger.questName);
             showRunLuaCodeAction = !string.IsNullOrEmpty(trigger.luaCode);
-            showPlaySequenceAction = !string.IsNullOrEmpty(trigger.sequence);
-            showAlertAction = !string.IsNullOrEmpty(trigger.alertMessage);
+            showPlaySequenceAction = !string.IsNullOrEmpty(trigger.sequence); // || trigger.sequenceSpeaker != null || trigger.sequenceListener != null;
+            showAlertAction = !string.IsNullOrEmpty(trigger.alertMessage); // || trigger.alertDuration > 0;
             showSendMessagesAction = trigger.sendMessages.Length > 0;
             showBarkAction = !string.IsNullOrEmpty(trigger.barkConversation) || !string.IsNullOrEmpty(trigger.barkText) || !string.IsNullOrEmpty(trigger.barkTextSequence); // || trigger.barker != null;
-            showConversationAction = !string.IsNullOrEmpty(trigger.conversation);
+            showConversationAction = !string.IsNullOrEmpty(trigger.conversation); // || trigger.conversationActor != null || trigger.conversationConversant != null;
             showSetActiveAction = trigger.setActiveActions.Length > 0;
             showSetEnabledAction = trigger.setEnabledActions.Length > 0;
             showAnimatorStatesAction = trigger.setAnimatorStateActions.Length > 0;
@@ -518,32 +517,6 @@ namespace PixelCrushers.DialogueSystem
                             GUI.color = originalColor;
                             if (!string.IsNullOrEmpty(barkConversationProperty.stringValue))
                             {
-                                var entryIDProperty = serializedObject.FindProperty("barkEntryID");
-                                var entryTitleProperty = serializedObject.FindProperty("barkEntryTitle");
-                                var specifyEntryID = EditorGUILayout.Toggle(new GUIContent("Specify Bark Entry", "Bark specific entry ID."), (entryIDProperty.intValue != -1));
-                                if (specifyEntryID)
-                                {
-                                    // Draw entry ID picker:
-                                    if (barkEntryPicker == null)
-                                    {
-                                        barkEntryPicker = new DialogueEntryPicker(barkConversationProperty.stringValue);
-                                    }
-                                    if (barkEntryPicker.isValid)
-                                    {
-                                        entryIDProperty.intValue = Mathf.Max(0, barkEntryPicker.DoLayout("Entry ID", entryIDProperty.intValue));
-                                    }
-                                    else
-                                    {
-                                        entryIDProperty.intValue = Mathf.Max(0, EditorGUILayout.IntField(new GUIContent("Entry ID", "Start at this entry ID."), entryIDProperty.intValue));
-                                    }
-                                    if (entryIDProperty.intValue > 0) entryTitleProperty.stringValue = string.Empty;
-                                }
-                                else
-                                {
-                                    entryIDProperty.intValue = -1;
-                                    entryTitleProperty.stringValue = string.Empty;
-                                }
-
                                 EditorGUILayout.PropertyField(serializedObject.FindProperty("barkOrder"), true);
                                 EditorGUILayout.PropertyField(serializedObject.FindProperty("barker"), true);
                                 EditorGUILayout.PropertyField(serializedObject.FindProperty("barkTarget"), true);

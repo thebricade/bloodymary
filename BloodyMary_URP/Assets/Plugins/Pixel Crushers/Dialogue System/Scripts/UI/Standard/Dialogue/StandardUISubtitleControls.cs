@@ -608,23 +608,7 @@ namespace PixelCrushers.DialogueSystem
             for (int i = 0; i < m_builtinPanels.Count; i++)
             {
                 var panel = m_builtinPanels[i];
-                if (panel != null && panel.isOpen && (panel.hasFocus || panel.isFocusing))
-                {
-                    panel.Unfocus();
-                }
-            }
-        }
-
-        public virtual void HideOnResponseMenu()
-        {
-            for (int i = 0; i < m_builtinPanels.Count; i++)
-            {
-                var panel = m_builtinPanels[i];
-                if (panel != null && panel.isOpen &&
-                    panel.visibility == UIVisibility.UntilSupercededOrActorChangeOrMenu)
-                {
-                    panel.Close();
-                }
+                if (panel != null && panel.isOpen && (panel.hasFocus || panel.isFocusing)) panel.Unfocus();
             }
         }
 

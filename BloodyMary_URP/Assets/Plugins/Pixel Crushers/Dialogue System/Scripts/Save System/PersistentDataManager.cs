@@ -207,10 +207,8 @@ namespace PixelCrushers.DialogueSystem
                     Tools.SendMessageToEveryone(message);
                     break;
                 case RecordPersistentDataOn.OnlyRegisteredGameObjects:
-                    var gos = new List<GameObject>(listeners); // listeners may change during loop.
-                    for (int i = gos.Count - 1; i >= 0; i--)
+                    foreach (var go in listeners)
                     {
-                        var go = gos[i];
                         if (go != null) go.SendMessage(message, SendMessageOptions.DontRequireReceiver);
                     }
                     break;
