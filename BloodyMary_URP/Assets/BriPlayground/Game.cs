@@ -8,8 +8,11 @@ public class Game : MonoBehaviour
 {
 
     [SerializeField] private GameObject player;
-    [SerializeField] private CinemachineBrain cameraBrain; 
-    
+    [SerializeField] private CinemachineBrain cameraBrain;
+
+    [SerializeField] private GameObject dialogueManager;
+    [SerializeField] private GameObject computer;
+    [SerializeField] private GameObject tutorial; 
     
     // Start is called before the first frame update
     void Awake()
@@ -31,18 +34,19 @@ public class Game : MonoBehaviour
         //ServiceLocator._SceneManger = gameObject.GetComponent<SceneManger>();
         ServiceLocator._SelectInterations = gameObject.GetComponent<SelectInterations>(); 
         
-        /*
+        
         //narrative
-        ServiceLocator._Flowchart = GameObject.Find("Flowchart").GetComponent<Flowchart>();
-        ServiceLocator._MashManager = GameObject.Find("Mash").GetComponent<MashManager>();
-        ServiceLocator._ComputerManager = GameObject.Find("Computer").GetComponent<ComputerManager>();
-        */
+        ServiceLocator._DialogueManager = dialogueManager;
+        ServiceLocator._Tutorial = tutorial; 
+        
          
         
         //Camera & Player Ref
         ServiceLocator._Player = player;
-        ServiceLocator._PlayerCamera = cameraBrain; 
-        Debug.Log(ServiceLocator._PlayerCamera);
+        ServiceLocator._PlayerCamera = cameraBrain;
+        ServiceLocator._Computer = computer; 
+        
+        
         //ServiceLocator._LivingRoomCamera = GameObject.Find("CM_LivingRoom").GetComponent<CinemachineVirtualCamera>();
         //ServiceLocator._ComputerCamera = GameObject.Find("CM_Computer").GetComponent<CinemachineVirtualCamera>(); 
         //bathroom mirror camera when added

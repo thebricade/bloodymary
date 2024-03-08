@@ -13,6 +13,7 @@ public enum ItemState
     PutDown,
     ChangeView,
     InView,
+    
 }
 
 public class ExamineItemState : MonoBehaviour
@@ -21,9 +22,12 @@ public class ExamineItemState : MonoBehaviour
     public bool canExamine;
     public bool changeView; 
 
+    //don't think I will need this - clear them out of here
     private CinemachineVirtualCamera mainCamera; 
     private CinemachineVirtualCamera examinationCamera;
 
+    public Material selectedMaterial;
+    public Material baseMaterial; 
     
     // Start is called before the first frame update
     void Start()
@@ -45,6 +49,10 @@ public class ExamineItemState : MonoBehaviour
         {
             Debug.Log("reset to idle");
             currentState = ItemState.Idle;
+            if (baseMaterial != null)
+            {
+                gameObject.GetComponent<MeshRenderer>().material = baseMaterial; 
+            }
         }
     }
 
@@ -59,6 +67,10 @@ public class ExamineItemState : MonoBehaviour
         
         if (currentState == ItemState.Hover)
         {
+            if (selectedMaterial != null)
+            {
+                gameObject.GetComponent<MeshRenderer>().material = selectedMaterial; 
+            }
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (changeView)
@@ -163,6 +175,10 @@ public class ExamineItemState : MonoBehaviour
     public void InView(string view)
     {
       Debug.Log("called inview");
+      if (currentState == ItemState.InView)
+      {
+         
+      }
         
         /*  if (currentState == ItemState.InView)
         {

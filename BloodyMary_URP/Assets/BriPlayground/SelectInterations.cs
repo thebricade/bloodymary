@@ -12,8 +12,7 @@ public class SelectInterations : MonoBehaviour
     
     
     //might not need below
-    public Material selectedMaterial;
-    public  Material baseMaterial; 
+    
     private bool isCurrentlySelected;
     private GameObject currentlySelected;
 
@@ -67,7 +66,8 @@ public class SelectInterations : MonoBehaviour
                             break;
                         case  ItemState.ChangeView:
                             ItemChangeView(objectSelecting);
-                            examineItem.InView(objectSelecting);
+                            examineItem.Idle();
+                            //examineItem.InView(objectSelecting);
                             //examineItem.ChangeView(objectSelecting);
                             break;
                         case ItemState.InView:
@@ -98,6 +98,8 @@ public class SelectInterations : MonoBehaviour
        {
            case "KEY_ComputerMonitor":
                Debug.Log("changing view to computer view");
+               ServiceLocator._Computer.SetActive(true);
+               ServiceLocator._Tutorial.SetActive(false);
                break;
        }
     }
