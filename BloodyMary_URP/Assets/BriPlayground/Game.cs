@@ -12,7 +12,9 @@ public class Game : MonoBehaviour
 
     [SerializeField] private GameObject dialogueManager;
     [SerializeField] private GameObject computer;
-    [SerializeField] private GameObject tutorial; 
+    [SerializeField] private GameObject tutorial;
+
+    [SerializeField] private GameObject magazine; 
     
     // Start is called before the first frame update
     void Awake()
@@ -37,7 +39,8 @@ public class Game : MonoBehaviour
         
         //narrative
         ServiceLocator._DialogueManager = dialogueManager;
-        ServiceLocator._Tutorial = tutorial; 
+        ServiceLocator._Tutorial = tutorial;
+        ServiceLocator._Magazine = magazine; 
         
          
         

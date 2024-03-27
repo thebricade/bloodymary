@@ -15,7 +15,8 @@ public class ServiceLocator
     public static CinemachineBrain _PlayerCamera;
 
     public static GameObject _DialogueManager;
-    public static GameObject _Computer; 
+    public static GameObject _Computer;
+    public static GameObject _Magazine; 
     
     //Scenes
     public static GameObject _Tutorial; 

@@ -101,6 +101,10 @@ public class SelectInterations : MonoBehaviour
                ServiceLocator._Computer.SetActive(true);
                ServiceLocator._Tutorial.SetActive(false);
                break;
+           case "KEY_Magazine": 
+               Debug.Log("changing view to magazine");
+               ServiceLocator._Magazine.SetActive(true);
+               break;
        }
     }
 }
