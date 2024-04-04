@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 public class SelectInterations : MonoBehaviour
@@ -22,6 +23,7 @@ public class SelectInterations : MonoBehaviour
         playerCamera = ServiceLocator._PlayerCamera; 
         Debug.Log(playerCamera);
         isCurrentlySelected = false;
+        
     }
 
     // Update is called once per frame
@@ -98,8 +100,10 @@ public class SelectInterations : MonoBehaviour
        {
            case "KEY_ComputerMonitor":
                Debug.Log("changing view to computer view");
+              // ServiceLocator._Computer.GetComponent<ExamineItemState>().ChangeCondition();
                ServiceLocator._Computer.SetActive(true);
                ServiceLocator._Tutorial.SetActive(false);
+               
                break;
            case "KEY_Magazine": 
                Debug.Log("changing view to magazine");

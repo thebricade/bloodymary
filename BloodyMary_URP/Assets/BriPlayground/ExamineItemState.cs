@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Hertzole.GoldPlayer;
+using PixelCrushers.DialogueSystem;
+using PixelCrushers; 
 using UnityEngine;
 
 
@@ -33,6 +35,7 @@ public class ExamineItemState : MonoBehaviour
     void Start()
     {
         examinationCamera = ServiceLocator._ExamineCamera;
+        ChangeCondition();
       //  mainCamera = ServiceLocator._PlayerCamera; 
 
 
@@ -76,6 +79,8 @@ public class ExamineItemState : MonoBehaviour
                 if (changeView)
                 {
                     Debug.Log("moving to Change View");
+                    
+                
                     currentState = ItemState.ChangeView; 
                 }
 
@@ -202,6 +207,12 @@ public class ExamineItemState : MonoBehaviour
         
       
     }
-    
 
+    public void ChangeCondition()
+    {
+        Debug.Log("we made it to here");
+        //DialogueSystemTrigger.OnUse();
+        DialogueManager.StartConversation("Day1_Erica"); 
+
+    }
 }
