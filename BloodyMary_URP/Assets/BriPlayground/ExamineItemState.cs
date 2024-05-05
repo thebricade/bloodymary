@@ -35,6 +35,7 @@ public class ExamineItemState : MonoBehaviour
     void Start()
     {
         examinationCamera = ServiceLocator._ExamineCamera;
+        Debug.Log(examinationCamera);
         ChangeCondition();
       //  mainCamera = ServiceLocator._PlayerCamera; 
 
