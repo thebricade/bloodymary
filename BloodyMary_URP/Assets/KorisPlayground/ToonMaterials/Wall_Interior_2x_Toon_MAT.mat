@@ -61,6 +61,7 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - DR_GRADIENT_ON
+  - DR_LIGHT_ATTENUATION
   - _DETAILMAPBLENDINGMODE_ADD
   - _NORMALMAP
   - _TEXTUREBLENDINGMODE_MULTIPLY
@@ -206,7 +207,7 @@ Material:
     - _OutlineScale: 1
     - _OutlineWidth: 10
     - _OverrideBakedGi: 0
-    - _OverrideLightAttenuation: 0
+    - _OverrideLightAttenuation: 1
     - _OverrideLightmapDir: 0
     - _Parallax: 0.005
     - _QueueOffset: 0
