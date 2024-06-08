@@ -13,6 +13,8 @@ public class Game : MonoBehaviour
     [SerializeField] private GameObject dialogueManager;
     [SerializeField] private GameObject computer;
     [SerializeField] private GameObject tutorial;
+    [SerializeField] private GameObject desk;
+    [SerializeField] private GameObject playerController; 
 
     [SerializeField] private GameObject magazine; 
     
@@ -46,18 +48,20 @@ public class Game : MonoBehaviour
         
         //Camera & Player Ref
         ServiceLocator._Player = player;
+        ServiceLocator._PlayerController = playerController; 
         ServiceLocator._PlayerCamera = cameraBrain;
-        ServiceLocator._Computer = computer; 
-        
-        
+        ServiceLocator._Computer = computer;
+        ServiceLocator._Desk = desk; 
+
+
         //ServiceLocator._LivingRoomCamera = GameObject.Find("CM_LivingRoom").GetComponent<CinemachineVirtualCamera>();
         //ServiceLocator._ComputerCamera = GameObject.Find("CM_Computer").GetComponent<CinemachineVirtualCamera>(); 
         //bathroom mirror camera when added
         //ServiceLocator._ExamineCamera = GameObject.Find("ExamineCamera").GetComponent<CinemachineVirtualCamera>();
-        
+
         //2d Game scenes 
         //ServiceLocator._2DComputerImage = GameObject.Find("ComputerImage"); 
-        
+
 
     }
 

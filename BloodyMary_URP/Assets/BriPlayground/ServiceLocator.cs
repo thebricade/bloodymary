@@ -13,10 +13,12 @@ public class ServiceLocator
     //ref to camera & players 
     public static GameObject _Player;
     public static CinemachineBrain _PlayerCamera;
-
+    public static GameObject _PlayerController; 
+    
     public static GameObject _DialogueManager;
     public static GameObject _Computer;
-    public static GameObject _Magazine; 
+    public static GameObject _Magazine;
+    public static GameObject _Desk; 
     
     //Scenes
     public static GameObject _Tutorial; 

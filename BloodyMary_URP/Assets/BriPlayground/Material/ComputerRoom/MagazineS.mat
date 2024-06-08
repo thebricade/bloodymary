@@ -14,7 +14,7 @@ Material:
   m_ValidKeywords:
   - DR_OUTLINE_ON
   - _DETAILMAPBLENDINGMODE_MULTIPLY
-  - _TEXTUREBLENDINGMODE_ADD
+  - _TEXTUREBLENDINGMODE_MULTIPLY
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -152,7 +152,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _TextureBlendingMode: 1
+    - _TextureBlendingMode: 0
     - _TextureImpact: 1
     - _UVSec: 0
     - _UnityShadowOcclusion: 0

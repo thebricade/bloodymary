@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Hertzole.GoldPlayer;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
@@ -108,6 +109,19 @@ public class SelectInterations : MonoBehaviour
            case "KEY_Magazine": 
                Debug.Log("changing view to magazine");
                ServiceLocator._Magazine.SetActive(true);
+               break;
+           case "KEY_Desk":
+               //this case may be a little too messy and full of alt references
+               Debug.Log("you are changing view to the desk");
+               ServiceLocator._Desk.SetActive(true);
+               //need to turn on cursor? 
+               Debug.Log(ServiceLocator._PlayerController);
+               ServiceLocator._PlayerController.GetComponent<GoldPlayerController>().Camera.LockCursor(false);
+               CursorOn();
+               ServiceLocator._PlayerController.SetActive(false);
+               //need to turn off collision after so you can't restart this interaction
+               GameObject.Find("KEY_Desk").GetComponent<MeshCollider>().enabled = false;  //don't forget to turn back on D: 
+               
                break;
        }
     }
