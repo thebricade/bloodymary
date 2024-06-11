@@ -120,7 +120,12 @@ public class SelectInterations : MonoBehaviour
                CursorOn();
                ServiceLocator._PlayerController.SetActive(false);
                //need to turn off collision after so you can't restart this interaction
-               GameObject.Find("KEY_Desk").GetComponent<MeshCollider>().enabled = false;  //don't forget to turn back on D: 
+               GameObject keyDesk = GameObject.Find("KEY_Desk"); 
+             
+               keyDesk.GetComponent<MeshCollider>().enabled = false;
+               keyDesk.AddComponent<ESCKey>(); 
+               
+               //don't forget to turn back on D: 
                
                break;
        }

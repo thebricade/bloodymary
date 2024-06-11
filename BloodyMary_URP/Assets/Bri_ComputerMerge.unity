@@ -1083,6 +1083,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2796120303819755815}
   - {fileID: 767022245}
   - {fileID: 453788837}
   - {fileID: 1041668968}
@@ -4247,7 +4248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 441489029}
   m_Layer: 0
-  m_Name: MagazineSprite
+  m_Name: -Magazine-
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6684,6 +6685,7 @@ MonoBehaviour:
   computer: {fileID: 1762481519}
   tutorial: {fileID: 1041668967}
   desk: {fileID: 2017507704}
+  playerController: {fileID: 3710037002412172227}
   magazine: {fileID: 441489028}
 --- !u!114 &635757960
 MonoBehaviour:
@@ -22986,7 +22988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2017507705
 Transform:
   m_ObjectHideFlags: 0
@@ -23019,7 +23021,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 0
+  m_Priority: 6
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -24422,7 +24424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3710037002412172227}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.44, y: 0.698, z: -5.8852124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -24430,7 +24432,7 @@ Transform:
   - {fileID: 6750549591722787590}
   - {fileID: 6749074973568317526}
   - {fileID: 5609145868046027815}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 95944667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2905947544721896238
 Transform:
@@ -25525,7 +25527,6 @@ SceneRoots:
   - {fileID: 1160234427}
   - {fileID: 95944667}
   - {fileID: 1762481520}
-  - {fileID: 2796120303819755815}
   - {fileID: 941380131}
   - {fileID: 441489029}
   - {fileID: 775186320}
