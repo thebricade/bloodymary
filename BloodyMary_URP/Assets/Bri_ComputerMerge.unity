@@ -24793,7 +24793,7 @@ MonoBehaviour:
     input_Crouch: Crouch
   headBob:
     bobClass:
-      enableBob: 1
+      enableBob: 0
       unscaledTime: 0
       bobFrequency: 1.5
       bobHeight: 0.3

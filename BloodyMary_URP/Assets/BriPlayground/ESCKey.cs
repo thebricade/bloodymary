@@ -20,8 +20,8 @@ public class ESCKey : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             ExitLastOpened(this.gameObject);
-            ServiceLocator._Tutorial.SetActive(true);
-            ServiceLocator._Computer.SetActive(false);
+            //ServiceLocator._Tutorial.SetActive(true);
+            //ServiceLocator._Computer.SetActive(false);
         }
     }
 
@@ -45,6 +45,11 @@ public class ESCKey : MonoBehaviour
              
                 keyDesk.GetComponent<MeshCollider>().enabled = true;
                 Destroy(keyDesk.GetComponent<ESCKey>());
+                break;
+            case "-Computer-":
+                Debug.Log("leaving computer screen");
+                ServiceLocator._Tutorial.SetActive(true);
+                ServiceLocator._Computer.SetActive(false);
                 break;
         }   
     }
