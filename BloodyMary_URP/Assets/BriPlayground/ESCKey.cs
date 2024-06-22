@@ -38,8 +38,11 @@ public class ESCKey : MonoBehaviour
                 ServiceLocator._Desk.SetActive(false);
                 //need to turn on cursor? 
                 Debug.Log(ServiceLocator._PlayerController);
-                ServiceLocator._PlayerController.GetComponent<GoldPlayerController>().Camera.LockCursor(false);
+                
                 ServiceLocator._PlayerController.SetActive(true);
+                ServiceLocator._PlayerController.GetComponent<GoldPlayerController>().Camera.LockCursor(false);
+                Cursor.visible = false;
+
                 //need to turn off collision after so you can't restart this interaction
                 GameObject keyDesk = GameObject.Find("KEY_Desk"); 
              

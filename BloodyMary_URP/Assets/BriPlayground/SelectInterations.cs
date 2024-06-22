@@ -10,7 +10,7 @@ public class SelectInterations : MonoBehaviour
     
     private CinemachineBrain playerCamera;
     private ExamineItemState examineItem;
-    
+    [SerializeField] private float DistanceFromObject; 
     
     
     //might not need below
@@ -36,7 +36,7 @@ public class SelectInterations : MonoBehaviour
        Debug.DrawRay(ray.origin,ray.direction *10, Color.red);
        RaycastHit hit;
        
-        if (Physics.Raycast(ray, out hit, 10))
+        if (Physics.Raycast(ray, out hit, DistanceFromObject))
         {
             if (hit.collider.gameObject.CompareTag("KeyItem"))
             {
@@ -103,7 +103,11 @@ public class SelectInterations : MonoBehaviour
                Debug.Log("changing view to computer view");
               // ServiceLocator._Computer.GetComponent<ExamineItemState>().ChangeCondition();
                ServiceLocator._Computer.SetActive(true);
-               ServiceLocator._Tutorial.SetActive(false);
+               ServiceLocator._PlayerController.GetComponent<GoldPlayerController>().Camera.LockCursor(false);
+               ServiceLocator._PlayerController.SetActive(false);
+               CursorOn();
+               
+               //ServiceLocator._Tutorial.SetActive(false);
                
                break;
            case "KEY_Magazine": 

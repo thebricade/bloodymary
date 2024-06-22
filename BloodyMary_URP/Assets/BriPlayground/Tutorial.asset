@@ -354,7 +354,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 154
-        y: 331
+        y: 330.19998
         width: 160
         height: 30
     entryGroups: []
@@ -507,7 +507,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 161
-        y: 118
+        y: 117.2
         width: 160
         height: 30
     entryGroups: []
@@ -625,11 +625,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -680,11 +680,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
