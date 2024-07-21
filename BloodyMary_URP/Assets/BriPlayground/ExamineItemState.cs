@@ -55,6 +55,7 @@ public class ExamineItemState : MonoBehaviour
             currentState = ItemState.Idle;
             if (baseMaterial != null)
             {
+                Debug.Log("Material should be base material");
                 gameObject.GetComponent<MeshRenderer>().material = baseMaterial; 
             }
         }
