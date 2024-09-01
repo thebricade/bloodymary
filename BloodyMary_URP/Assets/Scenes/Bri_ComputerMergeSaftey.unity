@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.088635206, g: 0.072249725, b: 0.051858738, a: 1}
+  m_IndirectSpecularColor: {r: 0.0884773, g: 0.07221361, b: 0.051895846, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -598,6 +598,7 @@ MonoBehaviour:
   button: {fileID: 114435224}
   label:
     m_uiText: {fileID: 789497934}
+    m_textMeshProUGUI: {fileID: 0}
   setLabelColor: 1
   defaultColor: {r: 0.78431374, g: 1, b: 1, a: 1}
 --- !u!1001 &120417986
@@ -1016,8 +1017,10 @@ MonoBehaviour:
   panel: {fileID: 619739754}
   label:
     m_uiText: {fileID: 283647686}
+    m_textMeshProUGUI: {fileID: 0}
   inputField:
     m_uiInputField: {fileID: 431560474}
+    m_textMeshProInputField: {fileID: 0}
   acceptKey: 13
   acceptButton: 
   cancelKey: 27
@@ -1282,6 +1285,7 @@ MonoBehaviour:
   button: {fileID: 195001475}
   label:
     m_uiText: {fileID: 1661122646}
+    m_textMeshProUGUI: {fileID: 0}
   setLabelColor: 0
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &195001475
@@ -2035,6 +2039,7 @@ MonoBehaviour:
   pcImage: {fileID: 0}
   pcName:
     m_uiText: {fileID: 0}
+    m_textMeshProUGUI: {fileID: 0}
   usePortraitNativeSize: 0
   timerSlider: {fileID: 0}
   buttonAlignment: 0
@@ -4456,6 +4461,7 @@ MonoBehaviour:
   pcImage: {fileID: 238151881}
   pcName:
     m_uiText: {fileID: 2023288348}
+    m_textMeshProUGUI: {fileID: 0}
   usePortraitNativeSize: 0
   timerSlider: {fileID: 1728074461}
   buttonAlignment: 0
@@ -4715,8 +4721,10 @@ MonoBehaviour:
   portraitImage: {fileID: 1119904282}
   portraitName:
     m_uiText: {fileID: 2000280627}
+    m_textMeshProUGUI: {fileID: 0}
   subtitleText:
     m_uiText: {fileID: 576783700}
+    m_textMeshProUGUI: {fileID: 0}
   addSpeakerName: 0
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 1
@@ -5892,6 +5900,8 @@ MonoBehaviour:
   dialogueManager: {fileID: 6108838689288912552}
   computer: {fileID: 1762481519}
   tutorial: {fileID: 1041668967}
+  desk: {fileID: 0}
+  playerController: {fileID: 0}
   magazine: {fileID: 441489028}
 --- !u!114 &635757960
 MonoBehaviour:
@@ -5905,6 +5915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 237dbc03e7d70304c99ff932159e9c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DistanceFromObject: 0
 --- !u!1 &643956950
 GameObject:
   m_ObjectHideFlags: 0
@@ -6221,6 +6232,128 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1070161143}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &692766689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692766690}
+  - component: {fileID: 692766693}
+  - component: {fileID: 692766692}
+  - component: {fileID: 692766691}
+  m_Layer: 0
+  m_Name: AmandaCoffin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &692766690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692766689}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -6.76, y: 0.7, z: -3.7}
+  m_LocalScale: {x: 0.028266668, y: 0.028266668, z: 0.028266668}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 767022245}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &692766691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692766689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: 62757be94bf9509419841483dded5675, type: 2}
+  initialSkinName: 
+  fixPrefabOverrideViaMeshFilter: 2
+  initialFlipX: 0
+  initialFlipY: 0
+  updateWhenInvisible: 3
+  separatorSlotNames: []
+  zSpacing: 0
+  useClipping: 1
+  immutableTriangles: 0
+  pmaVertexColors: 1
+  clearStateOnDisable: 0
+  tintBlack: 0
+  singleSubmesh: 0
+  fixDrawOrder: 0
+  addNormals: 0
+  calculateTangents: 0
+  maskInteraction: 0
+  maskMaterials:
+    materialsMaskDisabled: []
+    materialsInsideMask: []
+    materialsOutsideMask: []
+  disableRenderingOnOverride: 1
+  _animationName: idle_01
+  loop: 1
+  timeScale: 1
+--- !u!23 &692766692
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692766689}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 209110a71202ad448bd5e63605bc52bd, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &692766693
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692766689}
+  m_Mesh: {fileID: 0}
 --- !u!1 &694937238
 GameObject:
   m_ObjectHideFlags: 0
@@ -6828,6 +6961,7 @@ Transform:
   - {fileID: 2107282822}
   - {fileID: 201581902}
   - {fileID: 735483556}
+  - {fileID: 692766690}
   m_Father: {fileID: 95944667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &789497930
@@ -7737,8 +7871,10 @@ MonoBehaviour:
   portraitImage: {fileID: 889149309}
   portraitName:
     m_uiText: {fileID: 0}
+    m_textMeshProUGUI: {fileID: 0}
   subtitleText:
     m_uiText: {fileID: 316059390}
+    m_textMeshProUGUI: {fileID: 0}
   addSpeakerName: 0
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 0
@@ -7923,8 +8059,10 @@ MonoBehaviour:
   portraitImage: {fileID: 580725659}
   portraitName:
     m_uiText: {fileID: 0}
+    m_textMeshProUGUI: {fileID: 0}
   subtitleText:
     m_uiText: {fileID: 2037344789}
+    m_textMeshProUGUI: {fileID: 0}
   addSpeakerName: 0
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 0
@@ -9701,6 +9839,7 @@ MonoBehaviour:
   button: {fileID: 1174540552}
   label:
     m_uiText: {fileID: 2133221782}
+    m_textMeshProUGUI: {fileID: 0}
   setLabelColor: 1
   defaultColor: {r: 0.78431374, g: 1, b: 1, a: 1}
 --- !u!1001 &1175893903
@@ -13344,6 +13483,7 @@ MonoBehaviour:
   pcImage: {fileID: 1119904282}
   pcName:
     m_uiText: {fileID: 2000280627}
+    m_textMeshProUGUI: {fileID: 0}
   usePortraitNativeSize: 0
   timerSlider: {fileID: 1572109360}
   buttonAlignment: 0
@@ -13862,6 +14002,7 @@ MonoBehaviour:
     panel: {fileID: 1256448706}
     alertText:
       m_uiText: {fileID: 1701002496}
+      m_textMeshProUGUI: {fileID: 0}
     queueAlerts: 1
     dontQueueDuplicates: 1
     waitForHideAnimation: 1
@@ -15363,6 +15504,7 @@ MonoBehaviour:
     panel: {fileID: 2102485105}
     alertText:
       m_uiText: {fileID: 404307654}
+      m_textMeshProUGUI: {fileID: 0}
     queueAlerts: 1
     dontQueueDuplicates: 0
     waitForHideAnimation: 1
@@ -17288,8 +17430,10 @@ MonoBehaviour:
   panel: {fileID: 619159492}
   label:
     m_uiText: {fileID: 61224416}
+    m_textMeshProUGUI: {fileID: 0}
   inputField:
     m_uiInputField: {fileID: 1655225106}
+    m_textMeshProInputField: {fileID: 0}
   acceptKey: 13
   acceptButton: 
   cancelKey: 27
@@ -17591,6 +17735,7 @@ MonoBehaviour:
     panel: {fileID: 977541491}
     alertText:
       m_uiText: {fileID: 1191436410}
+      m_textMeshProUGUI: {fileID: 0}
     queueAlerts: 1
     dontQueueDuplicates: 0
     waitForHideAnimation: 1
@@ -17891,8 +18036,10 @@ MonoBehaviour:
   portraitImage: {fileID: 238151881}
   portraitName:
     m_uiText: {fileID: 2023288348}
+    m_textMeshProUGUI: {fileID: 0}
   subtitleText:
     m_uiText: {fileID: 643956954}
+    m_textMeshProUGUI: {fileID: 0}
   addSpeakerName: 0
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 1
@@ -21144,6 +21291,7 @@ MonoBehaviour:
     panel: {fileID: 6108838689485171980}
     alertText:
       m_uiText: {fileID: 6108838690352930724}
+      m_textMeshProUGUI: {fileID: 0}
     queueAlerts: 1
     dontQueueDuplicates: 1
     waitForHideAnimation: 1
@@ -21438,8 +21586,10 @@ MonoBehaviour:
   portraitImage: {fileID: 6108838689887271285}
   portraitName:
     m_uiText: {fileID: 0}
+    m_textMeshProUGUI: {fileID: 0}
   subtitleText:
     m_uiText: {fileID: 6108838690441815280}
+    m_textMeshProUGUI: {fileID: 0}
   addSpeakerName: 0
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 0
@@ -22567,6 +22717,7 @@ MonoBehaviour:
   button: {fileID: 6108838690516856066}
   label:
     m_uiText: {fileID: 6108838690548081242}
+    m_textMeshProUGUI: {fileID: 0}
   setLabelColor: 0
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &6108838690516856070
@@ -22744,6 +22895,7 @@ MonoBehaviour:
   pcImage: {fileID: 0}
   pcName:
     m_uiText: {fileID: 0}
+    m_textMeshProUGUI: {fileID: 0}
   usePortraitNativeSize: 0
   timerSlider: {fileID: 0}
   buttonAlignment: 0
@@ -23865,8 +24017,10 @@ MonoBehaviour:
   portraitImage: {fileID: 6108838690080271836}
   portraitName:
     m_uiText: {fileID: 0}
+    m_textMeshProUGUI: {fileID: 0}
   subtitleText:
     m_uiText: {fileID: 6108838689739385734}
+    m_textMeshProUGUI: {fileID: 0}
   addSpeakerName: 0
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 0
