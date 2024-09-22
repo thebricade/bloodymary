@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class SelectInterations : MonoBehaviour
 {
-    
+    /*
     private CinemachineBrain playerCamera;
     private ExamineItemState examineItem;
     [SerializeField] private float DistanceFromObject; 
@@ -133,7 +133,7 @@ public class SelectInterations : MonoBehaviour
                
                break;
        }
-    }
+    } */ 
 }
 
 
