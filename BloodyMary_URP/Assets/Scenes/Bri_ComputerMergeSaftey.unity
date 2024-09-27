@@ -4190,11 +4190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2d02e18126b9f4d837e378f608d92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
-  canExamine: 0
-  changeView: 1
-  selectedMaterial: {fileID: 2100000, guid: bc4525dcaf6c7564ba9c9a3e895afb9d, type: 2}
-  baseMaterial: {fileID: 2100000, guid: dff786afb9b1040498cdd9c2ff9d0976, type: 2}
 --- !u!1 &496842127
 GameObject:
   m_ObjectHideFlags: 0
@@ -5915,7 +5910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 237dbc03e7d70304c99ff932159e9c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistanceFromObject: 0
 --- !u!1 &643956950
 GameObject:
   m_ObjectHideFlags: 0
@@ -6585,11 +6579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2d02e18126b9f4d837e378f608d92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
-  canExamine: 0
-  changeView: 0
-  selectedMaterial: {fileID: 2100000, guid: 2f93b953c09f7c74d95f335f947b5174, type: 2}
-  baseMaterial: {fileID: 2100000, guid: 99c278d863e0b334992564739b905e04, type: 2}
 --- !u!136 &735483558
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6771,7 +6760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bc31d5a9207c64484876a6fa42666a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coffinCamera: {fileID: 12442272}
+  baseMaterial: {fileID: 0}
+  outlineMaterial: {fileID: 0}
 --- !u!1001 &737697914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24492,11 +24482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2d02e18126b9f4d837e378f608d92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
-  canExamine: 0
-  changeView: 1
-  selectedMaterial: {fileID: 2100000, guid: f9bcf9c1276549349879e84ebf413984, type: 2}
-  baseMaterial: {fileID: 2100000, guid: b13a6a8cc85d85940863fa21377d19de, type: 2}
 --- !u!114 &7874938434693264359
 MonoBehaviour:
   m_ObjectHideFlags: 0
