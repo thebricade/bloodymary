@@ -6,7 +6,7 @@ public class InteractionController : MonoBehaviour
 
     void Update()
     {
-       // if (FindObjectOfType<DialogueCheck>().IsDialogueActive) return; //if dialogue is happening don't do anything 
+        if (PixelCrushers.DialogueSystem.DialogueManager.IsConversationActive) return; // If dialogue is happening, don't do anything
         
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
