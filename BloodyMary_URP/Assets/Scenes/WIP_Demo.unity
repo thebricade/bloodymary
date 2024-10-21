@@ -5621,7 +5621,7 @@ MonoBehaviour:
   baseMaterial: {fileID: 2100000, guid: 99c278d863e0b334992564739b905e04, type: 2}
   outlineMaterial: {fileID: 2100000, guid: 2f93b953c09f7c74d95f335f947b5174, type: 2}
   conversationBell1: {fileID: 1695293481}
-  conversationBell2: {fileID: 0}
+  conversationBell2: {fileID: 1666845037}
 --- !u!114 &735483563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13452,7 +13452,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: 
+  conversation: CasketBell2
   conversationConversant: {fileID: 0}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
