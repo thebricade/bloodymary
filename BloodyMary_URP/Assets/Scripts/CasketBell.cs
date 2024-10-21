@@ -17,6 +17,10 @@ public class CasketBellInteractable : MonoBehaviour, IInteractable
     private int bellRings;
     private int bellRingsNeeded = 3;
     
+    //conversation needed for bell rings
+    [SerializeField] private GameObject conversationBell1;
+    [SerializeField] private GameObject conversationBell2; 
+    
     //Camera script that will transition us to the next scene
     private CameraPriority switchCamera; 
 
@@ -45,8 +49,7 @@ public class CasketBellInteractable : MonoBehaviour, IInteractable
     {
         if (bellRings >= bellRingsNeeded) //when you ring the bell over X amount we will call the wakeup sequence
         {
-            switchCamera.SetCameraHighestPriority();
-            Debug.Log("Set camera priority");
+           
         }
        
         if (currentState == ItemState.Idle)
@@ -70,7 +73,7 @@ public class CasketBellInteractable : MonoBehaviour, IInteractable
         {
             audioSource.Play(); // Play the audio clip
             bellRings++;
-            
+            BellAction();
             Debug.Log("Interacting with CasketBell");
             
             //currentState = ItemState.Examine; // Change state to examine or another state as needed (CasketBell does not have this need)
@@ -87,6 +90,36 @@ public class CasketBellInteractable : MonoBehaviour, IInteractable
         if (objectRenderer != null && baseMaterial != null)
         {
             objectRenderer.material = baseMaterial;
+        }
+    }
+
+    private void BellAction()
+    {
+        switch (bellRings)
+        {
+           case 1:
+               conversationBell1.SetActive(true);
+               
+               currentState = ItemState.Idle; // Reset to idle
+               // Optionally, revert visual changes made during hover
+               if (objectRenderer != null && baseMaterial != null)
+               {
+                   objectRenderer.material = baseMaterial;
+               }
+               break;
+           case 2 :
+               conversationBell2.SetActive(true);
+               currentState = ItemState.Idle; // Reset to idle
+               // Optionally, revert visual changes made during hover
+               if (objectRenderer != null && baseMaterial != null)
+               {
+                   objectRenderer.material = baseMaterial;
+               }
+               break;
+           case 3 :
+               switchCamera.SetCameraHighestPriority();
+               Debug.Log("Set camera priority");
+               break;
         }
     }
 }
