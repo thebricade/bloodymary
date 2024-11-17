@@ -5006,7 +5006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 0
-  ui: {fileID: 1712832698}
+  ui: {fileID: 0}
   dontDestroyPrefabIntance: 1
 --- !u!114 &704185323
 MonoBehaviour:
@@ -16585,7 +16585,7 @@ MonoBehaviour:
     m_uiText: {fileID: 0}
     m_textMeshProUGUI: {fileID: 0}
   subtitleText:
-    m_uiText: {fileID: 1723581294}
+    m_uiText: {fileID: 0}
     m_textMeshProUGUI: {fileID: 0}
   addSpeakerName: 0
   addSpeakerNameFormat: '{0}: {1}'
