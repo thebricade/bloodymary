@@ -20,7 +20,9 @@ public class Magazine : MonoBehaviour, IInteractable
     [SerializeField] private GameObject conversationBell2; 
     
     //Camera script that will transition us to the next scene
-    private CameraPriority switchCamera; 
+    private CameraPriority switchCamera;
+
+    [SerializeField] private GameObject nextSceneParent; 
 
     void Start()
     {
@@ -71,6 +73,7 @@ public class Magazine : MonoBehaviour, IInteractable
             currentState = ItemState.Examine; //  do we make a general version or will you always changed scenes on interactions? 
             
             switchCamera.SetCameraHighestPriority();
+            TurnOnObjects(); 
             // Additional interaction logic can go here
         }
     }
@@ -92,13 +95,18 @@ public class Magazine : MonoBehaviour, IInteractable
         }
     }
 
+    private void TurnOnObjects()
+    {
+          nextSceneParent.SetActive(true);
+    }
+
     /* private void BellAction()   may be able to use something like this on
     {
         switch (bellRings)
         {
            case 1:
                conversationBell1.SetActive(true);
-               
+
                currentState = ItemState.Idle; // Reset to idle
                // Optionally, revert visual changes made during hover
                if (objectRenderer != null && baseMaterial != null)
@@ -120,7 +128,7 @@ public class Magazine : MonoBehaviour, IInteractable
                Debug.Log("Set camera priority");
                break;
         }
-    } */ 
-    
+    } */
+
 }
 
