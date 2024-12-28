@@ -71,9 +71,9 @@ public class Magazine : MonoBehaviour, IInteractable
             Debug.Log("Interacting with Magazine");
             
             currentState = ItemState.Examine; //  do we make a general version or will you always changed scenes on interactions? 
-            
-            switchCamera.SetCameraHighestPriority();
             TurnOnObjects(); 
+            switchCamera.SetCameraHighestPriority();
+            
             // Additional interaction logic can go here
         }
     }
@@ -98,6 +98,8 @@ public class Magazine : MonoBehaviour, IInteractable
     private void TurnOnObjects()
     {
           nextSceneParent.SetActive(true);
+          Cursor.lockState = CursorLockMode.None;
+          Cursor.visible = true;
     }
 
     /* private void BellAction()   may be able to use something like this on

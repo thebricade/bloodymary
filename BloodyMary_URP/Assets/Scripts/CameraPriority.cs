@@ -5,10 +5,31 @@ using Cinemachine;
 
 public class CameraPriority : MonoBehaviour
 {
-    [SerializeField] private CinemachineVirtualCamera newVirtualCamera;
+    public CinemachineBrain _cinemachineBrain; 
+    [SerializeField] private CinemachineVirtualCamera newVirtualCamera, oldVirtualCamera;
     [SerializeField] private GameObject oldVirtualCameraObject, newVirtualCameraObject;
     [SerializeField] private int highestPriority; //whats the highest we want to have this set
     [SerializeField] private int defaultPriority; 
+    
+    private CinemachineBlendDefinition easeBlend;
+    private CinemachineBlendDefinition cutBlend;
+    
+    private void Awake()
+    {
+        // Define the cut blend
+        cutBlend = new CinemachineBlendDefinition
+        {
+            m_Style = CinemachineBlendDefinition.Style.Cut,
+            m_Time = 0f
+        };
+
+        // Define the ease blend
+        easeBlend = new CinemachineBlendDefinition
+        {
+            m_Style = CinemachineBlendDefinition.Style.EaseInOut,
+            m_Time = 2f
+        };
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +45,25 @@ public class CameraPriority : MonoBehaviour
         newVirtualCamera.Priority = highestPriority; 
         newVirtualCameraObject.SetActive(true);
         oldVirtualCameraObject.SetActive(false);
+    }
+
+    public void ChangeCameraBlendEase()
+    {
+        _cinemachineBrain.m_DefaultBlend = easeBlend;
+
+    }
+
+    public void ChangeCameraBlendCut()
+    {
+        _cinemachineBrain.m_DefaultBlend = cutBlend;
+    }
+    public void SetCameraBlend()
+    {
+        
+        newVirtualCamera.Priority = highestPriority;
+        oldVirtualCamera.Priority = 0; 
+
+
     }
   
 }
