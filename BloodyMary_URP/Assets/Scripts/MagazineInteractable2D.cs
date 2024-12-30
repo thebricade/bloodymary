@@ -49,8 +49,6 @@ public class MagazineInteractable2D : MonoBehaviour, IInteractable2D
         {
             // Debug: Interacting from Hover
              Debug.Log("Interacting with Magazine: changing camera.");
-            //_virtualCamera.transform.position = new Vector3(newX, newY, _virtualCamera.transform.position.z);
-            //_virtualCamera.m_Lens.OrthographicSize = newOrthoSize; 
             
             gameObject.GetComponent<CameraPriority>().ChangeCameraBlendEase();
             gameObject.GetComponent<CameraPriority>().SetCameraBlend();
@@ -62,9 +60,16 @@ public class MagazineInteractable2D : MonoBehaviour, IInteractable2D
                 hideObjectColliderAfter2.enabled = false;
             }
 
-            nextAnswer1.SetActive(true);
-            nextAnswer2.SetActive(true);
-            
+            if (nextAnswer1 != null)
+            {
+                nextAnswer1.SetActive(true);
+            }
+
+            if (nextAnswer2 != null)
+            {
+                nextAnswer2.SetActive(true);
+            }
+
             // Optionally update state if needed
             currentState = ItemState.Examine;
         }
@@ -85,5 +90,11 @@ public class MagazineInteractable2D : MonoBehaviour, IInteractable2D
             spriteRenderer.color = originalColor;
         }
         currentState = ItemState.Idle;
+    }
+    
+    public void TurnOffCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

@@ -1,30 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class SoundInteractions : MonoBehaviour, IInteractable
+public class TriggerInteraction : MonoBehaviour, IInteractable
 {
     private ItemState currentState;
-    private AudioSource _audioSource;
+    private AudioSource audioSource;
     
-
+    
     //base material is default - outline shows when you are in hover
     [SerializeField] private Material baseMaterial;
     [SerializeField] private Material outlineMaterial;
 
-    private Renderer objectRenderer;
-    [SerializeField] private GameObject nextSceneParent;
+    private Renderer objectRenderer; 
+    
+    
+    //conversation needed for start of magazine, if i can use this script for the full section we can have her say multiple things during this
     [SerializeField] private GameObject conversation1;
+    
 
     void Start()
     {
         currentState = ItemState.Idle; // Initialize state
-        _audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
-        //switchCamera = GetComponent<CameraPriority>();
-
+        audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
 
         objectRenderer = GetComponent<Renderer>();
-
+        
         //Make sure there is a base material at the start
         if (objectRenderer != null && baseMaterial != null)
         {
@@ -34,17 +36,17 @@ public class SoundInteractions : MonoBehaviour, IInteractable
 
     public void Update()
     {
-        Debug.Log(currentState);
+        
     }
 
     public void OnHover()
     {
-
+       
         if (currentState == ItemState.Idle)
         {
             Debug.Log("set the item state to Hover");
             currentState = ItemState.Hover; // Change state to hover
-
+            
             // Optionally, change the material or highlight the object
             if (objectRenderer != null && outlineMaterial != null)
             {
@@ -52,28 +54,31 @@ public class SoundInteractions : MonoBehaviour, IInteractable
             }
         }
 
-
+       
     }
 
     public void OnInteract()
     {
         if (currentState == ItemState.Hover)
         {
-            Debug.Log("Interacting with an item with sound");
-            conversation1.SetActive(true);
-            TurnOnOffMusic();
+            objectRenderer.material = baseMaterial;
+            // Additional interaction logic can go here
+            if (conversation1 != null)
+            {
+                conversation1.SetActive(true);
+            }
         }
     }
 
     public void OnExamine() // do we need this? 
     {
-
+        
     }
 
     public void ResetState()
     {
-        Debug.Log("Reset on Sound Interaction");
-
+        Debug.Log("Called reset state on Magazine");
+        
         currentState = ItemState.Idle; // Reset to idle
         // Optionally, revert visual changes made during hover
         if (objectRenderer != null && baseMaterial != null)
@@ -82,17 +87,5 @@ public class SoundInteractions : MonoBehaviour, IInteractable
         }
     }
 
-    private void TurnOnOffMusic()
-    {
-       Debug.Log("Changed Sound");
-        if(_audioSource.isPlaying)
-            _audioSource.Stop();
-        else _audioSource.Play();
-    }
-    private void TurnOnObjects()
-    {
-        nextSceneParent.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
 }
+

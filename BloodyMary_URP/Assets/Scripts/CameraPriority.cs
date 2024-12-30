@@ -57,6 +57,14 @@ public class CameraPriority : MonoBehaviour
     {
         _cinemachineBrain.m_DefaultBlend = cutBlend;
     }
+    
+    private void SwitchToPerspective()
+    {
+       
+        //vcam.m_Lens.Orthographic = false;
+
+    }
+    
     public void SetCameraBlend()
     {
         
