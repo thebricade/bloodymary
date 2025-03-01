@@ -12,6 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - DR_LIGHT_ATTENUATION
   - _DETAILMAPBLENDINGMODE_MULTIPLY
   - _NORMALMAP
   - _TEXTUREBLENDINGMODE_MULTIPLY
@@ -19,7 +20,7 @@ Material:
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     RenderType: Opaque
   disabledShaderPasses:
@@ -139,7 +140,7 @@ Material:
     - _OutlineScale: 1
     - _OutlineWidth: 1
     - _OverrideBakedGi: 0
-    - _OverrideLightAttenuation: 0
+    - _OverrideLightAttenuation: 1
     - _OverrideLightmapDir: 0
     - _Parallax: 0.02
     - _QueueOffset: 0
