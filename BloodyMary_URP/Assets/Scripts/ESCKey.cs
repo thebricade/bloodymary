@@ -19,10 +19,16 @@ public class ESCKey : MonoBehaviour
         //we need to add in other objects to this script
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            ExitLastOpened(this.gameObject);
-            //ServiceLocator._Tutorial.SetActive(true);
-            //ServiceLocator._Computer.SetActive(false);
+           this.gameObject.SetActive(false);
+           TurnOffCursor();
+            // ExitLastOpened(this.gameObject);
         }
+    }
+
+    private void TurnOffCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void ExitLastOpened(GameObject sceneConnectTo)

@@ -809,7 +809,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 150.87865
+        x: 147.39662
         y: 101.678635
         width: 160
         height: 30
@@ -1256,7 +1256,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'Hey birthday girl! '
+        value: 'Hey! Did you miss today? '
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -1311,7 +1311,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Testing
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -1393,8 +1393,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 87.89319, y: 0}
-    canvasZoom: 0.7300003
+    canvasScrollPosition: {x: 101.790054, y: 16.562313}
+    canvasZoom: 1.0000001
   - id: 6
     fields:
     - title: Title
@@ -3293,7 +3293,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Like captain planet? What does that mean?
+        value: 'Like captain planet? '
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -3311,6 +3311,61 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 2
+        destinationConversationID: 15
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 156.45679
+        y: 125.65675
+        width: 160
+        height: 30
+    - id: 3
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 'Bet I can search for it on the web. '
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
       userScript: 
@@ -3319,13 +3374,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 157.54892
-        y: 125.89786
+        x: 154.81155
+        y: 172.36629
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.94000006
+    canvasScrollPosition: {x: 48.87823, y: 52.630726}
+    canvasZoom: 0.9724995
   syncInfo:
     syncActors: 0
     syncItems: 0

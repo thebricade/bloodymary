@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935899b62f48ae5498594680ed17d133, type: 3}
-  m_Name: ComputerSetup
+  m_Name: ComputerSetup (Auto-Backup)
   m_EditorClassIdentifier: 
   version: 
   author: 
@@ -686,7 +686,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.87924993
+    canvasZoom: 1
   - id: 3
     fields:
     - title: Title
@@ -894,7 +894,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6394997
+    canvasZoom: 1
   - id: 4
     fields:
     - title: Title
