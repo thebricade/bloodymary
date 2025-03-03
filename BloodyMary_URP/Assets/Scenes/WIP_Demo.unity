@@ -25300,6 +25300,7 @@ GameObject:
   - component: {fileID: 7874938434693264356}
   - component: {fileID: 2249097507272910961}
   - component: {fileID: 7874938434693264357}
+  - component: {fileID: 7874938434693264361}
   m_Layer: 0
   m_Name: KEY_ComputerMonitor
   m_TagString: KeyItem
@@ -26904,7 +26905,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -26999,6 +27000,24 @@ MonoBehaviour:
   priority: 0
   ui: {fileID: 1065464528}
   dontDestroyPrefabIntance: 1
+--- !u!114 &7874938434693264361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408105109537445531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2554eeef2fd9949bcf0e8bfdc0af85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseMaterial: {fileID: 2100000, guid: b13a6a8cc85d85940863fa21377d19de, type: 2}
+  outlineMaterial: {fileID: 2100000, guid: f9bcf9c1276549349879e84ebf413984, type: 2}
+  conversation1: {fileID: 0}
+  conversationLocked: {fileID: 0}
+  nextSceneParent: {fileID: 1762481519}
+  metCondition: 1
 --- !u!33 &8308125013565584195
 MeshFilter:
   m_ObjectHideFlags: 0
