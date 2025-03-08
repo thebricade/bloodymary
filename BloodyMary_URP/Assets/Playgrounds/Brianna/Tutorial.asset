@@ -824,7 +824,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -1260,7 +1260,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Continue([all])
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
@@ -1315,7 +1315,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SetContinueMode(Never)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
